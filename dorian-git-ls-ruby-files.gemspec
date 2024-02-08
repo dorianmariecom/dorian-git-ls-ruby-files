@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email = "dorian@dorianmarie.fr"
   s.files = ["bin/git-ls-ruby-files"]
   s.executables << "git-ls-ruby-files"
-  s.homepage = "https://github.com/dorianmariefr/dorian-git-ls-ruby-files"
+  s.homepage = "https://github.com/dorianmariecom/dorian-git-ls-ruby-files"
   s.license = "MIT"
   s.metadata = { "rubygems_mfa_required" => "true" }
   s.add_dependency "git", "~> 1"
