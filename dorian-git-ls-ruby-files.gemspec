@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.summary = "List Tuby files checked in Git"
   s.description = "#{s.summary}\n\ne.g. `git ls-ruby-files`"
   s.authors = ["Dorian Marié"]
-  s.email = "dorian@dorianmarie.fr"
+  s.email = "dorian@dorianmarie.com"
   s.files = ["bin/git-ls-ruby-files"]
   s.executables << "git-ls-ruby-files"
   s.homepage = "https://github.com/dorianmariecom/dorian-git-ls-ruby-files"
