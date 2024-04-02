@@ -8,12 +8,13 @@ RSpec.describe "git-ls-ruby-files" do
     tempdir = Dir.mktmpdir
     ruby_tempfile = Tempfile.create([SecureRandom.hex, ".rb"], tempdir)
     js_tempfile = Tempfile.create([SecureRandom.hex, ".js"], tempdir)
+    pwd = Dir.pwd
 
     Dir.chdir(tempdir) do
       `git init && git add . && git commit -m "test from dorian-git-ls-ruby-files"`
 
-      expect(`git ls-ruby-files`).to include(File.basename(ruby_tempfile))
-      expect(`git ls-ruby-files`).to_not include(File.basename(js_tempfile))
+      expect(`#{pwd}/bin/git-ls-ruby-files`).to include(File.basename(ruby_tempfile))
+      expect(`#{pwd}/bin/git-ls-ruby-files`).to_not include(File.basename(js_tempfile))
     end
   ensure
     File.delete(ruby_tempfile) rescue nil
