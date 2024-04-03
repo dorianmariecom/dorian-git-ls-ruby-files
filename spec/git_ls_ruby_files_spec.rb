@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "spec_helper"
 require "securerandom"
 require "tmpdir"
@@ -13,12 +15,28 @@ RSpec.describe "git-ls-ruby-files" do
     Dir.chdir(tempdir) do
       `git init && git add . && git commit -m "test from dorian-git-ls-ruby-files"`
 
-      expect(`#{pwd}/bin/git-ls-ruby-files`).to include(File.basename(ruby_tempfile))
-      expect(`#{pwd}/bin/git-ls-ruby-files`).to_not include(File.basename(js_tempfile))
+      expect(`#{pwd}/bin/git-ls-ruby-files`).to include(
+        File.basename(ruby_tempfile)
+      )
+      expect(`#{pwd}/bin/git-ls-ruby-files`).to_not include(
+        File.basename(js_tempfile)
+      )
     end
   ensure
-    File.delete(ruby_tempfile) rescue nil
-    File.delete(js_tempfile) rescue nil
-    Dir.delete(tempdir) rescue nil
+    begin
+      File.delete(ruby_tempfile)
+    rescue StandardError
+      nil
+    end
+    begin
+      File.delete(js_tempfile)
+    rescue StandardError
+      nil
+    end
+    begin
+      Dir.delete(tempdir)
+    rescue StandardError
+      nil
+    end
   end
 end
