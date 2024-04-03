@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = "dorian-git-ls-ruby-files"
-  s.version = "0.1.3"
+  s.version = "0.1.4"
   s.summary = "List Tuby files checked in Git"
   s.description = "#{s.summary}\n\ne.g. `git ls-ruby-files`"
   s.authors = ["Dorian Marié"]
@@ -13,4 +13,6 @@ Gem::Specification.new do |s|
   s.license = "MIT"
   s.metadata = { "rubygems_mfa_required" => "true" }
   s.add_dependency "git", "~> 1"
+
+  s.required_ruby_version = ">= 3.3.0"
 end
