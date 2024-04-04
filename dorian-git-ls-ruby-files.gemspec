@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = "dorian-git-ls-ruby-files"
-  s.version = "0.1.5"
+  s.version = "0.1.6"
   s.summary = "List Tuby files checked in Git"
   s.description = "#{s.summary}\n\ne.g. `git ls-ruby-files`"
   s.authors = ["Dorian Marié"]
