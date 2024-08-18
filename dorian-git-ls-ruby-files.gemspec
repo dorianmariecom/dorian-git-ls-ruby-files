@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = "dorian-git-ls-ruby-files"
-  s.version = "0.2.1"
+  s.version = "0.2.2"
   s.summary = "list ruby files in git"
   s.description = s.summary
   s.authors = ["Dorian Marié"]
