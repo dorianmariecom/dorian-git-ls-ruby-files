@@ -3,8 +3,8 @@
 Gem::Specification.new do |s|
   s.name = "dorian-git-ls-ruby-files"
   s.version = "0.2.1"
-  s.summary = "List Tuby files checked in Git"
-  s.description = "#{s.summary}\n\ne.g. `git ls-ruby-files`"
+  s.summary = "list ruby files in git"
+  s.description = s.summary
   s.authors = ["Dorian Marié"]
   s.email = "dorian@dorianmarie.com"
   s.files = ["bin/git-ls-ruby-files"]
