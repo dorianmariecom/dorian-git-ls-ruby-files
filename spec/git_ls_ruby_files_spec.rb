@@ -18,7 +18,7 @@ RSpec.describe "git-ls-ruby-files" do
       expect(`#{pwd}/bin/git-ls-ruby-files`).to include(
         File.basename(ruby_tempfile)
       )
-      expect(`#{pwd}/bin/git-ls-ruby-files`).to_not include(
+      expect(`#{pwd}/bin/git-ls-ruby-files`).not_to include(
         File.basename(js_tempfile)
       )
     end
