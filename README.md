@@ -1,21 +1,35 @@
-# `dorian-pretty`
+# `dorian-git-ls-ruby-files`
 
-Formats files in the current directory
+List Ruby-looking files tracked by git.
 
-### Install
+## Install
 
 ```bash
-gem install dorian-pretty
+gem install dorian-git-ls-ruby-files
 ```
 
-Or as part of my other gems:
+Also included in the aggregate gem:
 
 ```bash
 gem install dorian
 ```
 
-### Usage
+## Usage
 
-`pretty`
+```bash
+git-ls-ruby-files
+```
 
-Will format all the supported files in the current directory
+Run `git-ls-ruby-files -h` for generated option details and `git-ls-ruby-files -v` for the installed version.
+
+## Notes
+
+- Uses git, file extensions, Ruby file names, and Ruby shebangs to decide what to print.
+
+## Examples
+
+### Format tracked Ruby files
+
+```bash
+git-ls-ruby-files | xargs ruby -c
+```
